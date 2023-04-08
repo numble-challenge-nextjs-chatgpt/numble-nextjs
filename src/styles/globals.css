@@ -1,3 +1,14 @@
+:root {
+  --main-background: #010101;
+  --main-color: #26d9fd;
+  --main-color-hover: #1db2d6;
+
+  --sub-color: #f76969;
+  --sub-color-hover: #f73d3d;
+
+  --main-font: 'Roboto', sans-serif;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,12 +22,12 @@ body {
 }
 
 body {
-  background: #010101;
+  background: var(--main-background);
 }
 
 .container {
   max-width: 640px;
   height: 100vh;
   margin: 0 auto;
-  background: aqua;
+  background: #fff;
 }
