@@ -7,6 +7,11 @@
   --sub-color-hover: #f73d3d;
 
   --main-font: 'Roboto', sans-serif;
+
+  --font-white: #fff;
+  --font-black: #000;
+
+  --border-color: #393939;
 }
 
 * {
@@ -21,13 +26,21 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
 body {
   background: var(--main-background);
 }
 
 .container {
   max-width: 640px;
-  height: 100vh;
   margin: 0 auto;
-  background: #fff;
 }
