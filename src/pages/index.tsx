@@ -8,18 +8,16 @@ import logoImg from '/public/images/numble-logo.png';
 const Home = () => {
   return (
     <PageContainer>
-      <main>
-        <div className={styles['page-container']}>
-          <div className={styles['middle-section']}>
-            <Image src={logoImg} alt="numble logo" width={80} />
-            <CommonInput id="apiKey" label="API KEY" />
-          </div>
-          <div className={styles['bottom-section']}>
-            <button className={styles['button-login']}>Login</button>
-            <a className={styles['text-button-get-key']}>KEY 발급받는 방법</a>
-          </div>
+      <div className={styles['page-container']}>
+        <div className={styles['middle-section']}>
+          <Image src={logoImg} alt="numble logo" width={80} />
+          <CommonInput id="apiKey" label="API KEY" />
         </div>
-      </main>
+        <div className={styles['bottom-section']}>
+          <button className={styles['button-login']}>Login</button>
+          <a className={styles['text-button-get-key']}>KEY 발급받는 방법</a>
+        </div>
+      </div>
     </PageContainer>
   );
 };

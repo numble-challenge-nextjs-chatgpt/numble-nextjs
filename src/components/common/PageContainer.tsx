@@ -6,7 +6,7 @@ interface PageContainerProps {
 }
 
 const PageContainer: NextPage<PageContainerProps> = ({ children }) => {
-  return <div className="container">{children}</div>;
+  return <main className="container">{children}</main>;
 };
 
 export default PageContainer;

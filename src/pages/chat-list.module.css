@@ -1,0 +1,13 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+
+  background: #aaa;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
