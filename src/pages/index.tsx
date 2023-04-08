@@ -1,3 +1,4 @@
+import CommonInput from '@/components/common/CommonInput';
 import PageContainer from '@/components/common/PageContainer';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
@@ -11,12 +12,7 @@ const Home = () => {
         <div className={styles['page-container']}>
           <div className={styles['middle-section']}>
             <Image src={logoImg} alt="numble logo" width={80} />
-            <div className={styles['input-container']}>
-              <label htmlFor="apiKey" className={styles['input-label']}>
-                API KEY
-              </label>
-              <input className={styles['input']} type="text" id="apiKey" />
-            </div>
+            <CommonInput id="apiKey" label="API KEY" />
           </div>
           <div className={styles['bottom-section']}>
             <button className={styles['button-login']}>Login</button>
