@@ -1,8 +1,12 @@
+import PageContainer from '@/components/common/PageContainer';
+
 const Home = () => {
   return (
-    <main>
-      <div>HOME</div>
-    </main>
+    <PageContainer>
+      <main>
+        <div>HOME</div>
+      </main>
+    </PageContainer>
   );
 };
 
