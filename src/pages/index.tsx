@@ -1,3 +1,4 @@
+import CommonButton from '@/components/common/CommonButton';
 import CommonInput from '@/components/common/CommonInput';
 import PageContainer from '@/components/common/PageContainer';
 import styles from '@/styles/Home.module.css';
@@ -14,7 +15,7 @@ const Home = () => {
           <CommonInput id="apiKey" label="API KEY" />
         </div>
         <div className={styles['bottom-section']}>
-          <button className={styles['button-login']}>Login</button>
+          <CommonButton text={'Login'} buttonType={'submit'} />
           <a className={styles['text-button-get-key']}>KEY 발급받는 방법</a>
         </div>
       </div>
