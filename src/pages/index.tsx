@@ -1,8 +1,25 @@
+import CommonButton from '@/components/common/CommonButton';
+import CommonInput from '@/components/common/CommonInput';
+import PageContainer from '@/components/common/PageContainer';
+import styles from '@/styles/Home.module.css';
+import Image from 'next/image';
+
+import logoImg from '/public/images/numble-logo.png';
+
 const Home = () => {
   return (
-    <main>
-      <div>HOME</div>
-    </main>
+    <PageContainer>
+      <div className={styles['page-container']}>
+        <div className={styles['middle-section']}>
+          <Image src={logoImg} alt="numble logo" width={80} />
+          <CommonInput id="apiKey" label="API KEY" />
+        </div>
+        <div className={styles['bottom-section']}>
+          <CommonButton text={'Login'} buttonType={'submit'} />
+          <a className={styles['text-button-get-key']}>KEY 발급받는 방법</a>
+        </div>
+      </div>
+    </PageContainer>
   );
 };
 
