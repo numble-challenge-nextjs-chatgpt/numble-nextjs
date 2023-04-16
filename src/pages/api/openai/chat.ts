@@ -9,8 +9,10 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>,
 ) {
+  const apiKey = JSON.parse(req.body).apiKey;
+
   const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey,
   });
 
   // const openai = new OpenAIApi(configuration);
