@@ -1,12 +1,12 @@
-import type { FC } from 'react';
+import type { FC, InputHTMLAttributes } from 'react';
 import styles from './CommonInput.module.css';
 
-interface CommonInputProps {
+interface CommonInputProps extends InputHTMLAttributes<HTMLInputElement> {
   id: string;
   label?: string;
 }
 
-const CommonInput: FC<CommonInputProps> = ({ label, id }) => {
+const CommonInput: FC<CommonInputProps> = ({ label, id, ...inputProps }) => {
   return (
     <div className={styles['input-container']}>
       {label && (
@@ -14,7 +14,7 @@ const CommonInput: FC<CommonInputProps> = ({ label, id }) => {
           {label}
         </label>
       )}
-      <input className={styles['input']} type="text" id={id} />
+      <input className={styles['input']} type="text" id={id} {...inputProps} />
     </div>
   );
 };

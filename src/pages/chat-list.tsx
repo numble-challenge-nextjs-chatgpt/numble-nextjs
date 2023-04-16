@@ -35,7 +35,7 @@ const ChatList = () => {
           ))}
         </div>
         <div className={styles['button-container']}>
-          <CommonButton text={'방 생성'} />
+          <CommonButton>방 생성</CommonButton>
         </div>
       </div>
       {openModal &&

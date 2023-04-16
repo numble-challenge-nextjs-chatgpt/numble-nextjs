@@ -13,16 +13,18 @@ export default async function handler(
     apiKey: process.env.OPENAI_API_KEY,
   });
 
-  const openai = new OpenAIApi(configuration);
+  // const openai = new OpenAIApi(configuration);
+  //
+  // const completion = await openai.createCompletion({
+  //   model: 'text-davinci-003',
+  //   prompt: 'Hello world',
+  // });
 
-  const completion = await openai.createCompletion({
-    model: 'text-davinci-003',
-    prompt: 'Hello world',
-  });
+  // console.log(completion.data.choices[0].text);
 
-  console.log(completion.data.choices[0].text);
+  // return res
+  //   .status(200)
+  //   .json({ message: completion.data.choices[0].text || 'no response' });
 
-  return res
-    .status(200)
-    .json({ message: completion.data.choices[0].text || 'no response' });
+  return res.status(200).json({ message: 'Hello from Next.js!' });
 }
