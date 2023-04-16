@@ -1,24 +1,12 @@
-import type { FC } from 'react';
+import type { ButtonHTMLAttributes, FC } from 'react';
 
 import styles from './CommonButton.module.css';
 
-interface CommonButtonProps {
-  text: string;
-  onClick?: () => void;
-  buttonType?: 'button' | 'submit' | 'reset';
-}
-const CommonButton: FC<CommonButtonProps> = ({
-  text,
-  onClick,
-  buttonType = 'button',
-}) => {
+interface CommonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
+const CommonButton: FC<CommonButtonProps> = ({ children, ...props }) => {
   return (
-    <button
-      type={buttonType}
-      onClick={onClick}
-      className={styles['common-button']}
-    >
-      {text}
+    <button className={styles['common-button']} {...props}>
+      {children}
     </button>
   );
 };
