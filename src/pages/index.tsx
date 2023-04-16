@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import CommonButton from '@/components/common/CommonButton';
 import CommonInput from '@/components/common/CommonInput';
 import PageContainer from '@/components/common/PageContainer';
@@ -6,12 +8,21 @@ import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 
 import logoImg from '/public/images/numble-logo.png';
-import { useEffect } from 'react';
 
 const Home = () => {
   const [apiKey, setApiKey] = useTokenContext();
-  const loginButtonHandler = () => {
-    console.log(apiKey);
+  const router = useRouter();
+
+  const loginButtonHandler = async () => {
+    const result = await fetch('/api/openai/auth', {
+      method: 'POST',
+      body: JSON.stringify({ apiKey }),
+    });
+
+    if (result.status === 200) {
+      alert('로그인 성공');
+      await router.push('/chat-list');
+    }
   };
 
   return (
