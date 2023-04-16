@@ -19,9 +19,15 @@ const Home = () => {
       body: JSON.stringify({ apiKey }),
     });
 
-    if (result.status === 200) {
+    const resultJson = await result.json();
+
+    if (resultJson.success) {
       alert('로그인 성공');
       await router.push('/chat-list');
+    }
+
+    if (!resultJson.success) {
+      alert(resultJson.message);
     }
   };
 
